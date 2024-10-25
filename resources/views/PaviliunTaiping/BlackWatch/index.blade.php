@@ -1,5 +1,4 @@
 @extends('template')
-@extends('sidebar')
 @section('isi')
 
     <body style="background: lightgray;">

@@ -13,13 +13,14 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="website icon" href="images/headlogo.png" type="image/png">
+
 
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-primary mb-3">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-       </button>
+        <button style="width: 5%" class="btn btn-mb btn-light" id="toggle-sidebar"><i class="fas fa-sliders-h"></i></button>
+
           <a class="navbar-brand" href="#"><font color="white">PAVILIUN TAIPING</font></a>
           <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
@@ -55,9 +56,33 @@
 
 
 
-    <div class="container">
-        @yield('isi')
-    </div>
+       <div id="content">
+        <main class="py-4">
+
+        <div id="sidebar">
+            <button class="btn btn-mb btn-light" id="hide-sidebar" align="center"><i class="fas fa-sliders-h"></i></button>
+            <hr>
+            <p><img src="gambar/headlogo.png" alt="logo" width="70">
+                Paviliun Taiping
+                </p>
+                <hr>
+                <div class="text-center">
+                    <p><a style="width: 100%;" class="btn btn-primary" href="{{route('home')}}"><i class="fas fa-tachometer-alt"></i> DASHBOARD</a></p>
+                    <p><a style="width: 100%;" class="btn btn-light" href=""><i class="fas fa-border-all"></i> PRESENSI</a></p>
+                    <p></p>
+
+            </div>
+
+            <div class="container">
+                <p><a style="color:aliceblue; text-decoration:none; font-size:20px" href="{{route('blackwatch.index')}}"><i class="fas fa-edit"></i> GANTI PASSWORD</a></p>
+
+            </div>
+
+        </div>
+            @yield('isi')
+        </main>
+        </div>
+
     <script src="./js/myscript.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
@@ -66,5 +91,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 
+    <footer class="">Footer</footer>
 </body>
 </html>
