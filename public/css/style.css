@@ -1,0 +1,44 @@
+
+#wrapper {
+    margin: auto;
+    width: 750px;
+    border: 1px solid red;
+}
+
+#header{
+    height: 58px;;
+
+}
+#inner {
+    float: left;
+    margin: 1px 0;
+}
+#sidebar {
+    background: rgba(0, 0, 0, 0.89);
+    float: left;
+    margin-right: 20px;
+    width: 300px;
+    height:1000px;
+    border: 1px dashed black;
+}
+#content {
+    float: left;
+    width: 1000px;
+    height: 700px;
+
+}
+#footer {
+    clear: both;
+    height: 50px;
+
+}
+.main-footer{
+    text-align: center;
+    font-family: Arial;
+    color: black;
+    height: 50px;
+}
+.nav-side a:hover{
+    text-decoration: none;
+}
+
