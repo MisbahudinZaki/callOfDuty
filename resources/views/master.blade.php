@@ -69,7 +69,7 @@
     <!-- Sidebar -->
     <div class="sidebar">
         <center>'
-        <img src="gambar/headlogo2.png" alt="logo" width="250">
+        <img src="gambar/headlogo2.png" alt="logo" width="250px">
         </center>
         <a href="#">Dashboard</a>
         <a href="#">Users</a>
@@ -79,7 +79,6 @@
 
     <!-- Main Content -->
     <div class="content">
-        <h1>Welcome to the Paviliun Taiping</h1>
         @yield('isi')
     </div>
 

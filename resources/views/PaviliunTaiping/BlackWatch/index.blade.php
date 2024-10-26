@@ -2,11 +2,14 @@
 @section('isi')
 
     <body style="background: lightgray;">
+
         <div class="container mt-5">
             <div class="row">
                 <div class="col-md-12">
                     <div class="card border-0 shadow rounded">
-                        <div class=" card-header">BLACKWATCH SYSTEM</div>
+                        <div class=" card-header">
+                            <img src="gambar/codlogo/paviliun/blackwatch.png" alt="" width="170px">
+                            BLACKWATCH SYSTEM</div>
                         <div class="card-body">
 
                             <button type="button" class="btn btn-success" data-toggle="modal" data-target="#itemModal">
