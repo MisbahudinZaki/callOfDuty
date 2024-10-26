@@ -1,0 +1,24 @@
+body {
+    font-size: .875rem;
+}
+
+.main-content {
+    padding-top: 56px;
+}
+
+#sidebar {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    padding-top: 20px;
+}
+
+#sidebar .nav-link.active {
+    color: #007bff;
+}
+
+#sidebar .nav-link:hover {
+    color: #0056b3;
+}

@@ -1,4 +1,4 @@
-@extends('template')
+@extends('master')
 @section('isi')
 
 <body style="background: lightgray">
