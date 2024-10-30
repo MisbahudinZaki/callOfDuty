@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\BlackWatch;
+use App\Models\tforce141;
 use Illuminate\Http\Request;
-use PhpParser\Node\Stmt\Return_;
 
-class BlackWatchController extends Controller
+class TaskForce141Controller extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +14,8 @@ class BlackWatchController extends Controller
      */
     public function index()
     {
-        $blackwatch = BlackWatch::all();
-        return view('PaviliunTaiping.BlackWatch.index', compact('blackwatch'));
+        $forces = tforce141::all();
+        return view('PaviliunTaiping.tf141.index', compact('forces'));
     }
 
     /**
@@ -38,12 +37,12 @@ class BlackWatchController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'blackwatch_id'=>'required',
+            'taskforce_id'=>'required',
         ]);
 
 
-        BlackWatch::create([
-            'blackwatch_id'=>$request->blackwatch_id,
+        tforce141::create([
+            'taskforce_id'=>$request->taskforce_id,
             'name'=>$request->name,
             'initial'=>$request->initial,
             'gender'=>$request->gender,
@@ -52,7 +51,7 @@ class BlackWatchController extends Controller
             'status'=>$request->status
         ]);
 
-        return redirect()->route('blackwatch.index');
+        return redirect()->route('taskforce141.index');
     }
 
     /**
@@ -63,13 +62,13 @@ class BlackWatchController extends Controller
      */
     public function show($id)
     {
-        $blackwatch = BlackWatch::find($id);
+        $force = tforce141::find($id);
 
-        if(!$blackwatch) {
+        if(!$force) {
             abort(404);
         }
 
-        return view('PaviliunTaiping.BlackWatch.show', ['blackwatch' => $blackwatch]);
+        return view('PaviliunTaiping.tf141.show', ['force' => $force]);
     }
 
     /**
@@ -78,9 +77,9 @@ class BlackWatchController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(BlackWatch $blackwatch)
+    public function edit(tforce141 $tforce141)
     {
-        return view('PaviliunTaiping.BlackWatch.edit', compact('blackwatch'));
+        return view('PaviliunTaiping.tf141.edit', compact('tforce141'));
     }
 
     /**
@@ -92,9 +91,9 @@ class BlackWatchController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $blackwatch=BlackWatch::find($id);
-        $blackwatch->update([
-            'blackwatch_id'=>$request->blackwatch_id,
+        $tforce141 = tforce141::find($id);
+        $tforce141->update([
+            'taskforce_id'=>$request->taskforce_id,
             'name'=>$request->name,
             'initial'=>$request->initial,
             'gender'=>$request->gender,
@@ -103,7 +102,7 @@ class BlackWatchController extends Controller
             'status'=>$request->status
         ]);
 
-       return redirect()->route('blackwatch.index');
+        return redirect()->route('taskforce141.index');
     }
 
     /**
@@ -114,9 +113,8 @@ class BlackWatchController extends Controller
      */
     public function destroy($id)
     {
-        $blackwatch=BlackWatch::find($id);
-        $blackwatch->destroy($id);
-        return redirect()->route('blackwatch.index');
+        $tforce141=tforce141::find($id);
+        $tforce141->delete();
+        return redirect()->route('taskforce141.index');
     }
-
 }

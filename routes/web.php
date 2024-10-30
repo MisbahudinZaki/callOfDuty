@@ -4,6 +4,8 @@ use App\Http\Controllers\BlackWatchController;
 use App\Http\Controllers\ImageController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\TaskForce141Controller;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -21,5 +23,10 @@ Route::get('/', function () {
 
 Route::resource('blackwatch', BlackWatchController::class);
 Route::post('bwPhoto', [BlackWatchController::class, 'createImage'])->name('bwphoto.create');
-Route::resource('image', ImageController::class);
+
+//Route::resource('image', ImageController::class);
 Route::get('home',[HomeController::class, 'home'])->name('home');
+
+Route::resource('taskforce141', TaskForce141Controller::class);
+
+Route::get('tfImage', [ImageController::class, "updateTaskforce"])->name('updateTaskForce');

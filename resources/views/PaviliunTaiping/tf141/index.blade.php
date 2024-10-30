@@ -144,7 +144,7 @@
                                                         </div>
                                                         <div class="modal-body">
 
-                                                            <form action="#" method="POST" enctype="multipart/form-data">
+                                                            <form action="{{ route('image.update', $item->id) }}" method="POST" enctype="multipart/form-data">
                                                                 @csrf
                                                                 @method('PUT')
                                                                 <div class="form-group">
